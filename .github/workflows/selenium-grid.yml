@@ -1,0 +1,42 @@
+name: Run Selenium Grid Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  selenium-grid-tests:
+    runs-on: ubuntu-latest
+
+    services:
+      selenium:
+        image: selenium/standalone-chrome:latest  # Selenium Grid com Chrome
+        options: --shm-size 2g  # Aumenta o tamanho da memória compartilhada para evitar problemas com o Chrome
+        ports:
+          - 4444:4444  # Expõe a porta do Selenium Grid
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'  # Defina a versão do Java que seu projeto utiliza
+          distribution: 'adoptopenjdk'
+
+      - name: Set up Maven
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'
+          maven-version: '3.6.3'
+
+      - name: Install dependencies
+        run: mvn clean install -DskipTests
+
+      - name: Run tests on Selenium Grid
+        run: mvn test -Dtest=HeaderRunner

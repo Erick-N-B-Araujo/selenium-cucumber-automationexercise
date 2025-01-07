@@ -3,13 +3,9 @@ package steps;
 import configurations.BaseTest;
 import configurations.Utils;
 import configurations.WebDriverManager;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
 import pageobjects.HeaderPage;
-
-import java.util.Set;
 
 public class HeadersSteps extends BaseTest {
     HeaderPage headerPage = new HeaderPage();

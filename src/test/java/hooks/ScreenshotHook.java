@@ -1,6 +1,5 @@
 package hooks;
 
-import configurations.WebDriverManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
