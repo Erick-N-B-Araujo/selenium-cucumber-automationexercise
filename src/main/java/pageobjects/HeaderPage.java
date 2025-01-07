@@ -1,11 +1,12 @@
 package pageobjects;
 
+import configurations.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class HeaderPage {
-    WebDriver driver;
+    WebDriverManager webDriverManager = new WebDriverManager();
+    WebDriver driver = webDriverManager.getDriver();
     By headerProducts = By.xpath("//a[contains(text(), 'Products')]");
     By headerCart = By.xpath("//a[contains(text(), 'Cart')]");
     By headerSignupLogin = By.xpath("//a[contains(text(), 'Signup / Login')]");
@@ -24,10 +25,13 @@ public class HeaderPage {
     By titleContactUs = By.xpath("//h2[contains(text(), 'Contact')]");
     By btnClose = By.xpath("//span[contains(text(), 'Close')]");
     public By iframeAdvertisement = By.id("ad_iframe");
-    public HeaderPage(WebDriver driver) {
-        this.driver = driver;
+    public HeaderPage() {
     }
-
+    /**
+     * Clicks on the header link based on the provided link text.
+     *
+     * @param  link  the text of the header link to click on
+     */
     public void clickHeaderLink(String link){
         switch (link.toLowerCase()){
             case "home":
@@ -56,7 +60,11 @@ public class HeaderPage {
                 break;
         }
     }
-
+    /**
+     * Verifies the title and performs corresponding actions based on the given title.
+     *
+     * @param  title    the title to be verified and acted upon
+     */
     public void verifyTitle(String title){
         switch (title.toLowerCase()){
             case "home":
@@ -85,7 +93,9 @@ public class HeaderPage {
                 break;
         }
     }
-
+    /**
+     * Clicks the close button if it is displayed.
+     */
     public void clickCloseBtn(){
         if (driver.findElement(btnClose).isDisplayed()){
             driver.findElement(btnClose).click();
