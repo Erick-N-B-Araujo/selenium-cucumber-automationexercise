@@ -31,12 +31,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-
-      - name: Set up Maven
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          maven-version: '3.6.3'
+          cache: maven
 
       - name: Install dependencies
         run: mvn clean install -DskipTests
