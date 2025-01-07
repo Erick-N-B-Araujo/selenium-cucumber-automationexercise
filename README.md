@@ -1,7 +1,7 @@
-## Selenium Cucumber Automation Framework
+# Selenium Cucumber Automation Framework
 
 This project is a comprehensive automation framework designed to test the functionalities of the Automation Exercise website. The framework leverages Selenium WebDriver, Cucumber, and TestNG, organized using the Page Object Model (POM) for better maintainability and scalability.
-# Features
+## Features
 Functionalities Covered:
 
     Authentication:
@@ -24,20 +24,20 @@ Functionalities Covered:
     UI/UX:
         Navigation and responsiveness of web pages.
 
-Project Highlights:
+## Project Highlights:
 
     Page Object Model (POM): Organized structure to separate test logic from UI interactions.
     Cucumber BDD: Easy-to-understand Gherkin syntax for defining test scenarios.
     Cross-Browser Support: Capable of testing on multiple browsers by configuring WebDriver.
 
-Prerequisites
+## Prerequisites
 
     Java Development Kit (JDK) 8 or higher.
     Maven for dependency management.
     ChromeDriver (or any WebDriver for your preferred browser).
     IntelliJ IDEA or any IDE supporting Java.
 
-Installation and Setup
+## Installation and Setup
 
     Clone the repository:
 
@@ -53,7 +53,7 @@ Install dependencies:
 
     Update the path/to/chromedriver in BaseTest.java with the location of your WebDriver executable.
 
-How to Run Tests
+## How to Run Tests
 
     Run all tests:
 
@@ -63,7 +63,7 @@ Execute specific feature files using tags:
 
     mvn test -Dcucumber.filter.tags="@Search"
 
-Project Structure
+## Project Structure
 
     src/main/java:
         configurations: Contains base setup and teardown methods.
@@ -76,12 +76,12 @@ Project Structure
     src/test/resources:
         features: Gherkin-based feature files.
 
-Future Enhancements
+## Future Enhancements
 
     Include support for additional browsers like Firefox and Edge.
     Expand test coverage to include additional user flows.
     Integrate with CI/CD pipelines using Jenkins or GitHub Actions.
 
-License
+## License
 
 This project is open-source under the MIT License. Contributions and improvements are welcome!
