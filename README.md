@@ -1,4 +1,5 @@
 # Selenium Cucumber Automation Framework
+[![Selenium Grid Tests](https://github.com/Erick-N-B-Araujo/selenium-cucumber-automationexercise/actions/workflows/selenium-grid.yml/badge.svg)](https://github.com/Erick-N-B-Araujo/selenium-cucumber-automationexercise/actions/workflows/selenium-grid.yml)
 
 This project is a comprehensive automation framework designed to test the functionalities of the [Automation Exercise](https://www.automationexercise.com) website. The framework leverages **Selenium WebDriver**, **Cucumber**, and **TestNG**, organized using the **Page Object Model (POM)** for better maintainability and scalability.
 ## Features
