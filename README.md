@@ -90,7 +90,6 @@ This project is a comprehensive automation framework designed to test the functi
 
 - Include support for additional browsers like Firefox and Edge.
 - Expand test coverage to include additional user flows.
-- Integrate with CI/CD pipelines using Jenkins or GitHub Actions.
 
 ## License
 
